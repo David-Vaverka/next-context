@@ -151,13 +151,6 @@ export async function getServerSideProps(context) {
     console.log('AAAAAAAAAAAAAAAAAAAAAAAAA123')
 
 
-    let a = new Array(1000000)
-
-    for (const av of a)
-    {
-        console.log(av, 'ads')
-    }
-
     const resFetch = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${context.params.id}`,
         { cache: 'no-store' },
