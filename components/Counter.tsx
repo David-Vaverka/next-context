@@ -10,15 +10,18 @@ export default function Counter() {
     // @ts-ignore
     const [theme, setTheme] = useThemeContext();
 
+
+    function onClick() {
+        setCount(count + 1)
+
+        setTheme(count)
+    }
+
     return (
         <div>
             theme: {theme}
             <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>Click me</button>
-
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
+            <button onClick={() => onClick()}>Click me</button>
         </div>
     );
 }
