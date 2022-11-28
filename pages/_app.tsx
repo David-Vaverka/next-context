@@ -11,4 +11,9 @@ export default function MyApp<any>({ Component, pageProps }) {
             </Layout>
         </ThemeProvider>
     )
+
+}
+
+function getInitialProps() {
+    console.log('SADSA__')
 }

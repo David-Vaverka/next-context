@@ -9,7 +9,7 @@ const Counter = dynamic(() => import('../../components/Counter'), {
 
 console.log('AAAAAAAAAAAAAHOJ')
 // @ts-ignore
-function About<any>({data}) {
+export default function About<any>({data}) {
     // @ts-ignore
     const [theme, setTheme] = useThemeContext();
 
@@ -30,8 +30,8 @@ function About<any>({data}) {
             LANDING
         </div>
 
-            <div className="flex container w-full container mx-auto flex flex-wrap justify-between ">
-                <div className="lg:w-4/6  flex-none p-2">
+            <div className="flex container w-full container mx-auto flex flex-wrap justify-between flex-col lg:flex-row">
+                <div className=" lg:w-4/6  flex-none p-2">
 
                     <Image
                         src="https://cataas.com/cat"
@@ -60,6 +60,7 @@ function About<any>({data}) {
                     </div>
 
 
+                    <Counter></Counter>
                 </div>
             </div>
 
@@ -123,4 +124,3 @@ export async function getServerSideProps(context) {
     return { props: { data } }
 }
 
-export default About
